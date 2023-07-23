@@ -64,6 +64,8 @@ button {
   font-size: 0.75rem;
   border: 2px solid rgb(17, 17, 17);
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   font-family: inter, sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -94,6 +96,25 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-animation: headerContentAnim 1.5s forwards;
+          animation: headerContentAnim 1.5s forwards;
+}
+@-webkit-keyframes headerContentAnim {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes headerContentAnim {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 .header-content .header-text-icon {
   width: 100%;
@@ -126,6 +147,14 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.header-content .header-icon {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.header-content .header-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 nav {
@@ -349,13 +378,57 @@ footer .form-content button {
 }
 footer .contact {
   display: grid;
-  padding: 0 50px;
+  grid-template-rows: repeat(4, 1fr);
+  border-left: 1px solid rgb(209, 209, 209);
 }
 footer .contact div {
   display: grid;
-  grid-template-columns: 35% 65%;
-  text-align: left;
+  grid-template-columns: 30% 70%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+footer .contact div h4 {
+  font-family: inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: rgb(105, 105, 105);
+  text-align: left;
+  padding-left: 40px;
+}
+footer .contact div p {
+  text-align: left;
+  font-size: 0.8rem;
+  color: rgb(105, 105, 105);
+}
+footer .contact div .social-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .contact div .social-right li {
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 150px;
+  width: 40px;
+  height: 40px;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  margin-right: 12px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+footer .contact div .social-right li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }/*# sourceMappingURL=index.css.map */

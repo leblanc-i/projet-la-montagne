@@ -82,6 +82,7 @@ button {
     font-size: 0.75rem;
     border: 2px solid $black1;
     cursor: pointer;
+    transition: 0.3s;
     @include title;
 
     &:hover {

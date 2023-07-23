@@ -9,6 +9,16 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: headerContentAnim 1.5s forwards;
+
+    @keyframes headerContentAnim {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
     .header-text-icon {
         width: 100%;
@@ -33,6 +43,13 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+    }
+    .header-icon {
+        transition: 0.2s;
+
+        &:hover {
+            transform: scale(1.1);
         }
     }
 

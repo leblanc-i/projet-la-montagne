@@ -309,4 +309,53 @@ main .section2 .right-content p {
 }
 main .section2 .right-content button {
   margin: 20px auto 40px;
+}
+
+footer {
+  background: rgb(233, 233, 233);
+  width: 85%;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+footer .form-content {
+  max-width: 600px;
+  padding: 60px 50px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
+  gap: 18px;
+}
+footer .form-content label {
+  font-family: inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  text-align: left;
+  color: rgb(105, 105, 105);
+}
+footer .form-content input, footer .form-content textarea {
+  outline: none;
+  background: none;
+  border: 1px solid rgb(209, 209, 209);
+  resize: none;
+  border-radius: 4px;
+  padding: 10px;
+}
+footer .form-content button {
+  color: rgb(105, 105, 105);
+  border-color: rgb(105, 105, 105);
+  margin-top: 20px;
+}
+footer .contact {
+  display: grid;
+  padding: 0 50px;
+}
+footer .contact div {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  text-align: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }/*# sourceMappingURL=index.css.map */

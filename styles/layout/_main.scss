@@ -21,6 +21,13 @@ main {
                     width: 37%;
                     top: 50%;
                     transform: translateY(-50%);
+
+                    @media screen and (max-width: 700px) {
+                        width: 25%;
+                    }
+                    @media screen and (max-width: 360px) {
+                        width: 20%;
+                    }
                 }
                 &::before {
                     left: 0;
@@ -32,6 +39,13 @@ main {
             h2 {
                 @include title;
                 font-size: 3rem;
+
+                @media screen and (max-width: 700px) {
+                    font-size: 2rem;
+                }
+                @media screen and (max-width: 500px) {
+                    font-size: 1.3rem;
+                }
             }
             p {
                 font-style: italic;
@@ -39,11 +53,25 @@ main {
                 line-height: 35px;
                 width: 60%;
                 margin: 30px auto;
+
+                @media screen and (max-width: 700px) {
+                    font-size: 0.7rem;
+                    line-height: 20px;
+                    text-align: left;
+                    width: 80%;
+                }
             }
         }
         .img {
             height: 500px;
-            background: url("/images/pic01.jpg") center/cover;   
+            background: url("/images/pic01.jpg") center/cover; 
+            
+            @media screen and (max-width: 700px) {
+                height: 300px;
+            }
+            @media screen and (max-width: 500px) {
+                height: 200px;
+            }
         }
         button {
             margin: 45px auto 65px;
@@ -54,6 +82,10 @@ main {
         grid-template-columns: 50% 50%;
         border-top: 1px solid $grey1;
 
+        @media screen and (max-width: 650px) {
+            display: block;
+        }
+
         .left-content {
             padding: 0 10%;
             span {
@@ -61,17 +93,34 @@ main {
                 padding: 40px 0 20px;
             }
             h3 {
-                @include title
+                @include title;
+                line-height: 30px;
+
+                @media screen and (max-width: 500px) {
+                    font-size: 1rem;
+                }
             }
             .img-left {
                 height: 260px;
                 background: url("/images/pic02.jpg") center/cover;
                 margin: 30px auto;
+
+                @media screen and (max-width: 700px) {
+                    height: 220px;
+                }
+                @media screen and (max-width: 500px) {
+                    height: 200px;
+                }
             }
             p {
                 font-size: 0.8rem;
                 line-height: 30px;
                 text-align: left;
+
+                @media screen and (max-width: 700px) {
+                    font-size: 0.7rem;
+                    line-height: 25px;
+                }
             }
             button {
                 margin: 20px auto 40px;
@@ -83,19 +132,36 @@ main {
             span {
                 display: block;
                 padding: 40px 0 20px;
+
+                @media screen and (max-width: 650px) {
+                    padding: 0 0 10px;
+                }
             }
             h3 {
-                @include title
+                @include title;
+                line-height: 30px;
             }
             .img-right {
                 height: 260px;
                 background: url("/images/pic03.jpg") center/cover;
                 margin: 30px auto;
+
+                @media screen and (max-width: 700px) {
+                    height: 220px;
+                }
+                @media screen and (max-width: 500px) {
+                    height: 200px;
+                }
             }
             p {
                 font-size: 0.8rem;
                 line-height: 30px;
                 text-align: left;
+
+                @media screen and (max-width: 700px) {
+                    font-size: 0.7rem;
+                    line-height: 25px;
+                }
             }
             button {
                 margin: 20px auto 40px;

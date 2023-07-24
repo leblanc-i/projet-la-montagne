@@ -16,6 +16,11 @@ nav {
         height: 100%;
     }
     .nav-text {
+        @media screen and (max-width: 650px) {
+            width: 100%;
+
+        }
+
         &:hover li:not(:hover) {
             background: none;
             color: $bwhite1;
@@ -29,6 +34,15 @@ nav {
             align-items: center;
             cursor: pointer;
             transition: 0.2s;
+
+            @media screen and (max-width: 650px) {
+                padding: 0 31px;
+                font-size: 0.6rem;
+            }
+            @media screen and (max-width: 465px) {
+                padding: 0 5px;
+                font-size: 0.6rem;
+            }
 
             &:nth-child(1) {
                 background: $bwhite1;
@@ -46,7 +60,10 @@ nav {
         max-width: 300px;
         width: 25%;
         justify-content: space-around;
-        margin-right: 10px;
+
+        @media screen and (max-width: 650px) {
+            display: none;
+        }
 
         li {
             margin-right: 10px;

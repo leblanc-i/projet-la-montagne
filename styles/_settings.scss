@@ -85,6 +85,12 @@ button {
     transition: 0.3s;
     @include title;
 
+    @media screen and (max-width: 500px) {
+        width: 120px;
+        height: 35px;
+        font-size: 0.6rem;
+    }
+
     &:hover {
         transform: scale(1.05);
     }

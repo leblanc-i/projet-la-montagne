@@ -5,6 +5,10 @@ footer {
     display: grid;
     grid-template-columns: 50% 50%;
 
+    @media screen and (max-width: 730px) {
+        display: block;
+    }
+
     .form-content {
         max-width: 600px;
         padding: 60px 50px;
@@ -12,6 +16,11 @@ footer {
         display: grid;
         grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
         gap: 18px;
+        @media screen and (max-width: 500px) {
+            display: grid;
+            grid-template-rows: 18px 35px 18px 35px 18px 100px 1fr;
+            gap: 15px;
+        }
 
         label {
             @include title;
@@ -39,11 +48,27 @@ footer {
         grid-template-rows: repeat(4, 1fr);
         border-left: 1px solid $grey1;
 
+        @media screen and (max-width: 730px) {
+            display: grid;
+            grid-template-rows: repeat(4, 100px);
+
+            .adress {
+                border: 1px solid $grey1;
+                width: 100%;
+            }
+        }
+
         div {
             display: grid;
             grid-template-columns: 30% 70%;
             align-items: center;
             border-bottom: 1px solid $grey1;
+
+            @media screen and (max-width: 410px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                min-width: 40%;
+            }
 
             h4 {
                 @include title;
@@ -72,6 +97,12 @@ footer {
                     cursor: pointer;
                     margin-right: 12px;
                     transition: 0.2s;
+
+                    @media screen and (max-width: 410px) {
+                        width: 30px;
+                        height: 30px;
+                        font-size: 0.6rem;
+                    }
 
                     &:hover {
                         transform: scale(1.1);

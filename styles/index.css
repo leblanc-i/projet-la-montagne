@@ -70,6 +70,13 @@ button {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 500px) {
+  button {
+    width: 120px;
+    height: 35px;
+    font-size: 0.6rem;
+  }
+}
 button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -127,10 +134,25 @@ header {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 700px) {
+  .header-content .header-text-icon h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-content .header-text-icon h1 {
+    font-size: 2rem;
+  }
+}
 .header-content .header-text-icon p {
   font-style: italic;
   width: 85%;
   margin: 40px auto 60px;
+}
+@media screen and (max-width: 500px) {
+  .header-content .header-text-icon p {
+    font-size: 0.9rem;
+  }
 }
 .header-content .header-text-icon div {
   width: 40px;
@@ -185,6 +207,11 @@ nav ul {
           align-items: center;
   height: 100%;
 }
+@media screen and (max-width: 650px) {
+  nav .nav-text {
+    width: 100%;
+  }
+}
 nav .nav-text:hover li:not(:hover) {
   background: none;
   color: rgb(243, 243, 243);
@@ -206,6 +233,18 @@ nav .nav-text li {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
+@media screen and (max-width: 650px) {
+  nav .nav-text li {
+    padding: 0 31px;
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 465px) {
+  nav .nav-text li {
+    padding: 0 5px;
+    font-size: 0.6rem;
+  }
+}
 nav .nav-text li:nth-child(1) {
   background: rgb(243, 243, 243);
   color: rgb(17, 17, 17);
@@ -221,7 +260,11 @@ nav .nav-icon {
   width: 25%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-right: 10px;
+}
+@media screen and (max-width: 650px) {
+  nav .nav-icon {
+    display: none;
+  }
 }
 nav .nav-icon li {
   margin-right: 10px;
@@ -257,6 +300,16 @@ main .section1 .content span::before, main .section1 .content span::after {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+@media screen and (max-width: 700px) {
+  main .section1 .content span::before, main .section1 .content span::after {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 360px) {
+  main .section1 .content span::before, main .section1 .content span::after {
+    width: 20%;
+  }
+}
 main .section1 .content span::before {
   left: 0;
 }
@@ -269,6 +322,16 @@ main .section1 .content h2 {
   text-transform: uppercase;
   font-size: 3rem;
 }
+@media screen and (max-width: 700px) {
+  main .section1 .content h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .section1 .content h2 {
+    font-size: 1.3rem;
+  }
+}
 main .section1 .content p {
   font-style: italic;
   font-size: 0.8rem;
@@ -276,9 +339,27 @@ main .section1 .content p {
   width: 60%;
   margin: 30px auto;
 }
+@media screen and (max-width: 700px) {
+  main .section1 .content p {
+    font-size: 0.7rem;
+    line-height: 20px;
+    text-align: left;
+    width: 80%;
+  }
+}
 main .section1 .img {
   height: 500px;
   background: url("/images/pic01.jpg") center/cover;
+}
+@media screen and (max-width: 700px) {
+  main .section1 .img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .section1 .img {
+    height: 200px;
+  }
 }
 main .section1 button {
   margin: 45px auto 65px;
@@ -287,6 +368,11 @@ main .section2 {
   display: grid;
   grid-template-columns: 50% 50%;
   border-top: 1px solid rgb(209, 209, 209);
+}
+@media screen and (max-width: 650px) {
+  main .section2 {
+    display: block;
+  }
 }
 main .section2 .left-content {
   padding: 0 10%;
@@ -299,16 +385,38 @@ main .section2 .left-content h3 {
   font-family: inter, sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
+  line-height: 30px;
+}
+@media screen and (max-width: 500px) {
+  main .section2 .left-content h3 {
+    font-size: 1rem;
+  }
 }
 main .section2 .left-content .img-left {
   height: 260px;
   background: url("/images/pic02.jpg") center/cover;
   margin: 30px auto;
 }
+@media screen and (max-width: 700px) {
+  main .section2 .left-content .img-left {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .section2 .left-content .img-left {
+    height: 200px;
+  }
+}
 main .section2 .left-content p {
   font-size: 0.8rem;
   line-height: 30px;
   text-align: left;
+}
+@media screen and (max-width: 700px) {
+  main .section2 .left-content p {
+    font-size: 0.7rem;
+    line-height: 25px;
+  }
 }
 main .section2 .left-content button {
   margin: 20px auto 40px;
@@ -321,20 +429,42 @@ main .section2 .right-content span {
   display: block;
   padding: 40px 0 20px;
 }
+@media screen and (max-width: 650px) {
+  main .section2 .right-content span {
+    padding: 0 0 10px;
+  }
+}
 main .section2 .right-content h3 {
   font-family: inter, sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
+  line-height: 30px;
 }
 main .section2 .right-content .img-right {
   height: 260px;
   background: url("/images/pic03.jpg") center/cover;
   margin: 30px auto;
 }
+@media screen and (max-width: 700px) {
+  main .section2 .right-content .img-right {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .section2 .right-content .img-right {
+    height: 200px;
+  }
+}
 main .section2 .right-content p {
   font-size: 0.8rem;
   line-height: 30px;
   text-align: left;
+}
+@media screen and (max-width: 700px) {
+  main .section2 .right-content p {
+    font-size: 0.7rem;
+    line-height: 25px;
+  }
 }
 main .section2 .right-content button {
   margin: 20px auto 40px;
@@ -347,6 +477,11 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
 }
+@media screen and (max-width: 730px) {
+  footer {
+    display: block;
+  }
+}
 footer .form-content {
   max-width: 600px;
   padding: 60px 50px;
@@ -354,6 +489,13 @@ footer .form-content {
   display: grid;
   grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
   gap: 18px;
+}
+@media screen and (max-width: 500px) {
+  footer .form-content {
+    display: grid;
+    grid-template-rows: 18px 35px 18px 35px 18px 100px 1fr;
+    gap: 15px;
+  }
 }
 footer .form-content label {
   font-family: inter, sans-serif;
@@ -381,6 +523,16 @@ footer .contact {
   grid-template-rows: repeat(4, 1fr);
   border-left: 1px solid rgb(209, 209, 209);
 }
+@media screen and (max-width: 730px) {
+  footer .contact {
+    display: grid;
+    grid-template-rows: repeat(4, 100px);
+  }
+  footer .contact .adress {
+    border: 1px solid rgb(209, 209, 209);
+    width: 100%;
+  }
+}
 footer .contact div {
   display: grid;
   grid-template-columns: 30% 70%;
@@ -388,6 +540,13 @@ footer .contact div {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid rgb(209, 209, 209);
+}
+@media screen and (max-width: 410px) {
+  footer .contact div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 40%;
+  }
 }
 footer .contact div h4 {
   font-family: inter, sans-serif;
@@ -427,6 +586,13 @@ footer .contact div .social-right li {
   margin-right: 12px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+@media screen and (max-width: 410px) {
+  footer .contact div .social-right li {
+    width: 30px;
+    height: 30px;
+    font-size: 0.6rem;
+  }
 }
 footer .contact div .social-right li:hover {
   -webkit-transform: scale(1.1);
